@@ -13,7 +13,7 @@ const Navbar = () => {
                     <Brand height={55} />
                 </a>
 
-                <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto fs-5">
+                <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
                     <Nav.Link><Link className="me-3 py-2 text-dark text-decoration-none" to="/">Home</Link></Nav.Link>
                     <Nav.Link><Link className="me-3 py-2 text-dark text-decoration-none" to="/about">About</Link></Nav.Link>
                     <Nav.Link><Link className="me-3 py-2 text-dark text-decoration-none" to="/contact">Contact</Link></Nav.Link>
@@ -23,8 +23,8 @@ const Navbar = () => {
                     <IconContext.Provider value={{ size: "2em", color: "black", }}>
                         <a className="me-2" href="https://github.com/xanderbilla"><FaGithub /></a>
                     </IconContext.Provider>
-                    <button type="button" class="btn btn-outline-dark me-2 fs-5" disabled>Sign In</button>
-                    <button type="button" class="btn btn-dark fs-5" disabled>Sign Up</button>
+                    <button type="button" className="btn btn-outline-dark me-2" disabled>Sign In</button>
+                    <button type="button" className="btn btn-dark" disabled>Sign Up</button>
                 </nav>
             </div>
         </div>
