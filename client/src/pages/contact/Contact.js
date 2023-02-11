@@ -26,24 +26,24 @@ const Contact = () => {
                 </div>
                 <div className="col-md-10 mx-auto col-lg-5">
                     <p className='col-lg-10 fs-4 fw-bold'>What's your story?</p>
-                    <form className="p-2 p-md-4 border rounded-3 bg-light">
+                    <form className="p-2 p-md-4 border rounded-3 bg-light" ref={formRef} onSubmit={handleSubmit}>
                         <div className="form-floating mb-3">
-                            <input name="user_name" type="text" className="form-control" id="name" placeholder="Name" />
+                            <input name="user_name" type="text" className="form-control" id="name" placeholder="Name"  required={true}/>
                             <label for="name">Name</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input name="user_email" type="email" className="form-control" id='email' placeholder="Email" />
+                            <input name="user_email" type="email" className="form-control" id='email' placeholder="Email"  required={true}/>
                             <label for="email">Email</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input name='user_subject' type="text" className="form-control" id="subject" placeholder="Subject" />
+                            <input name='user_subject' type="text" className="form-control" id="subject" placeholder="Subject"  required={true}/>
                             <label for="subject">Subject</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <textarea name='message' type="text" className="form-control" id="message" placeholder="Message" style={{height: "100px"}}/>
+                            <textarea name='message' type="text" className="form-control" id="message" placeholder="Message" style={{height: "100px"}} required={true}/>
                             <label for="message">Message</label>
                         </div>
-                        <button className="w-100 btn btn-lg btn-primary" type="submit" onSubmit={handleSubmit}>Submit</button>
+                        <button className="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
                         <hr className="my-4" />
                         <small className="text-muted">{done && "Thank You!!!"}</small>
                     </form>
