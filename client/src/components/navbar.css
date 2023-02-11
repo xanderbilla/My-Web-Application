@@ -6,6 +6,12 @@
     user-select: none;
   }
 
+  @media screen and (max-width: 480px) {
+    .navigation{
+      margin-bottom: 10px;
+    }
+  }
+
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;

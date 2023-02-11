@@ -13,7 +13,7 @@ const Navbar = () => {
                     <Brand height={55} />
                 </a>
 
-                <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto navigation">
                     <Nav.Link><Link className="me-3 py-2 text-dark text-decoration-none" to="/">Home</Link></Nav.Link>
                     <Nav.Link><Link className="me-3 py-2 text-dark text-decoration-none" to="/about">About</Link></Nav.Link>
                     <Nav.Link><Link className="me-3 py-2 text-dark text-decoration-none" to="/contact">Contact</Link></Nav.Link>
