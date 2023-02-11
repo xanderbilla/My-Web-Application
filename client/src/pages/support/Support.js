@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+
 import './support.css'
 const Support = () => {
     return (
@@ -23,7 +26,8 @@ const Support = () => {
                                 <li>Doubt Session</li>
                                 <li>&nbsp;</li>
                             </ul>
-                            <button type="button" className="w-100 btn btn-lg btn-outline-primary">Submit Your Query</button>
+                            <Link className="deco" to="/contact">
+                            <button type="button" className="w-100 btn btn-lg btn-outline-primary">Submit Your Query</button></Link>
                         </div>
                     </div>
                 </div>
@@ -40,7 +44,8 @@ const Support = () => {
                                 <li>Lecture Delivery</li>
                                 <li>Program Writting</li>
                             </ul>
-                            <button type="button" className="w-100 btn btn-lg btn-primary">Get started</button>
+                            <button type="button" className="w-100 btn btn-lg btn-primary disabled">Get started</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -57,7 +62,8 @@ const Support = () => {
                                 <li>Backend Deployment</li>
                                 <li>Deployment and Managament</li>
                             </ul>
-                            <button type="button" className="w-100 btn btn-lg btn-primary">Contact us</button>
+                            <Link className="deco" to="/contact">
+                            <button type="button" className="w-100 btn btn-lg btn-primary">Contact us</button></Link>
                         </div>
                     </div>
                 </div>
