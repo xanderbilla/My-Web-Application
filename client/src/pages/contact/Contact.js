@@ -28,20 +28,20 @@ const Contact = () => {
                     <p className='col-lg-10 fs-4 fw-bold'>What's your story?</p>
                     <form className="p-2 p-md-4 border rounded-3 bg-light" ref={formRef} onSubmit={handleSubmit}>
                         <div className="form-floating mb-3">
-                            <input name="user_name" type="text" className="form-control" id="name" placeholder="Name"  required={true}/>
-                            <label for="name">Name</label>
+                            <input name="user_name" type="text" className="form-control" id="name" placeholder="Name" required={true} />
+                            <label htmlFor="name">Name</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input name="user_email" type="email" className="form-control" id='email' placeholder="Email"  required={true}/>
-                            <label for="email">Email</label>
+                            <input name="user_email" type="email" className="form-control" id='email' placeholder="Email" required={true} />
+                            <label htmlFor="email">Email</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input name='user_subject' type="text" className="form-control" id="subject" placeholder="Subject"  required={true}/>
-                            <label for="subject">Subject</label>
+                            <input name='user_subject' type="text" className="form-control" id="subject" placeholder="Subject" required={true} />
+                            <label htmlFor="subject">Subject</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <textarea name='message' type="text" className="form-control" id="message" placeholder="Message" style={{height: "100px"}} required={true}/>
-                            <label for="message">Message</label>
+                            <textarea name='message' type="text" className="form-control" id="message" placeholder="Message" style={{ height: "100px" }} required={true} />
+                            <label htmlFor="message">Message</label>
                         </div>
                         <button className="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
                         <hr className="my-4" />
