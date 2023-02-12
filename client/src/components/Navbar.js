@@ -23,8 +23,8 @@ const Navbar = () => {
                     <IconContext.Provider value={{ size: "2em", color: "black", }}>
                         <a className="me-2" href="https://github.com/xanderbilla"><FaGithub /></a>
                     </IconContext.Provider>
-                    <button type="button" className="btn btn-outline-dark me-2" disabled>Sign In</button>
-                    <button type="button" className="btn btn-dark" disabled>Sign Up</button>
+                    <Link type="submit" className="me-2 btn btn-outline-dark text-decoration-none" to="/SignIn">Sign In</Link>
+                    <Link type="submit" className="btn btn-dark text-decoration-none" to="/SignUp">Sign Up</Link>
                 </nav>
             </div>
         </div>
