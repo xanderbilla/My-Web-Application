@@ -8,7 +8,7 @@ function Footer() {
   return (
     <Container>
       <div className="p-4 mb-2 rounded-3 border-top">
-        <p className='d-flex justify-content-center'>&copy; {new Date().getFullYear()} | Fuck You, Inc. All rights reserved.</p>
+        <p className='d-flex justify-content-center'>&copy; {new Date().getFullYear()} | Xander Billa, Inc. All rights reserved.</p>
         <div className='d-flex justify-content-center'>
           <IconContext.Provider value={{ size: "2em", color: "black", style: { marginRight: '0.8rem' } }}>
             <Link to="https://discord.com/channels/@me/843582508124995605"><FaDiscord /></Link>
