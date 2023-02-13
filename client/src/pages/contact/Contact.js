@@ -1,10 +1,36 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import AutoWriter from '../../assets/AutoWriter'
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const formRef = useRef();
     const [done, setDone] = useState(false);
+    const [userData, setUserData] = useState({});
+
+    const userContact = async () => {
+        try {
+            const res = await fetch('/getdata', {
+                method: "GET",
+                headers: {
+                    "Content-type": "application/json"
+                }
+            });
+            const data = await res.json();
+            console.log(data);
+            setUserData(data);
+
+            if (!res.status === 200) {
+                const error = new Error(res.error);
+                throw error;
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    useEffect(() => {
+        userContact();
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,11 +54,11 @@ const Contact = () => {
                     <p className='col-lg-10 fs-4 fw-bold'>What's your story?</p>
                     <form className="p-2 p-md-4 border rounded-3 bg-light" ref={formRef} onSubmit={handleSubmit}>
                         <div className="form-floating mb-3">
-                            <input name="user_name" type="text" className="form-control" id="name" placeholder="Name" required={true} />
+                            <input name="user_name" type="text" className="form-control" id="name" placeholder="Name" required={true} value={userData.name}/>
                             <label htmlFor="name">Name</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input name="user_email" type="email" className="form-control" id='email' placeholder="Email" required={true} />
+                            <input name="user_email" type="email" className="form-control" id='email' placeholder="Email" required={true} value={userData.email}/>
                             <label htmlFor="email">Email</label>
                         </div>
                         <div className="form-floating mb-3">
