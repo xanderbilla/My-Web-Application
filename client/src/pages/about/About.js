@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './about.css'
 const About = () => {
     return (
@@ -23,13 +24,13 @@ const About = () => {
                 </div>
 
                 <div className="col-md-6">
-                <h2 className='display-7 fw-semibold'>Projects</h2>
+                    <h2 className='display-7 fw-semibold'>Projects</h2>
                     <p>Check out the projects I had made and the upcoming projects. All are web application projects.</p>
                     <ul className="icon-list ps-0">
-                        <li className="d-flex align-items-start mb-1"><a className="text-decoration-none" href="https://xanderbilla-static-portfolio.vercel.app/">Single Static Page Using HTML and CSS</a></li>
-                        <li className="d-flex align-items-start mb-1"><a className="text-decoration-none" href="https://promsnat-aws.s3.ap-south-1.amazonaws.com/Image-Slider+-+JavaScript/index.html">Image Slider Using JavaScript</a></li>
-                        <li className="d-flex align-items-start mb-1"><a className="text-decoration-none" href="https://xanderbilla-react-portfolio-i.vercel.app/">Portfolio Using React</a></li>
-                        <li className="d-flex align-items-start mb-1"><a className="text-decoration-none" href="https://xanderbilla-react-bootstrap-web-application.vercel.app/">Basic Web Application Using Bootstrap and React</a></li>
+                        <li className="d-flex align-items-start mb-1"><Link className="text-decoration-none" to="https://xanderbilla-static-portfolio.vercel.app/">Single Static Page Using HTML and CSS</Link></li>
+                        <li className="d-flex align-items-start mb-1"><Link className="text-decoration-none" to="https://promsnat-aws.s3.ap-south-1.amazonaws.com/Image-Slider+-+JavaScript/index.html">Image Slider Using JavaScript</Link></li>
+                        <li className="d-flex align-items-start mb-1"><Link className="text-decoration-none" to="https://xanderbilla-react-portfolio-i.vercel.app/">Portfolio Using React</Link></li>
+                        <li className="d-flex align-items-start mb-1"><Link className="text-decoration-none" to="https://xanderbilla-react-bootstrap-web-application.vercel.app/">Basic Web Application Using Bootstrap and React</Link></li>
                         <li className="text-muted d-flex align-items-start mb-1">Netflix Clone Using React (Coming Soon)</li>
                     </ul>
                 </div>
