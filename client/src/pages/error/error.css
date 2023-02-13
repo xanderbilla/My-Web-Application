@@ -1,0 +1,15 @@
+.container-err {
+  text-align: center;
+}
+
+.header {
+  font-size: 6em;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  font-size: 1.5em;
+  color: #999;
+  margin-top: 1em;
+}
