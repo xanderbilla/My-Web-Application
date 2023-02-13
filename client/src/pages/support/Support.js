@@ -1,9 +1,29 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
-
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import './support.css'
+
 const Support = () => {
+    const history = useNavigate();
+    const callSupportPage = async () => {
+        try {
+            const res = await fetch('/support');
+            const data = await res.json();
+            console.log(data);
+
+            if (!res.status === 200) {
+                const error = new Error(res.error);
+                throw error;
+            }
+        } catch (err) {
+            console.log(err);
+            history('/signIn')
+        }
+    }
+
+    useEffect(() => {
+        callSupportPage();
+    });
+
     return (
         <main className='container'>
             <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
@@ -44,8 +64,8 @@ const Support = () => {
                                 <li>Lecture Delivery</li>
                                 <li>Program Writting</li>
                             </ul>
-                            <button type="button" className="w-100 btn btn-lg btn-primary disabled">Get started</button>
-                            
+                            <Link className="deco" to="/contact">
+                            <button type="button" className="w-100 btn btn-lg btn-primary">Get Started</button></Link>
                         </div>
                     </div>
                 </div>
